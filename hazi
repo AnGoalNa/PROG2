@@ -1,0 +1,162 @@
+public class hazielso {
+    public static void main(String[] args) {
+        
+
+
+substring=acheck(notcontain);
+        System.out.println(substring);
+
+
+
+
+substring=acheck(notcontain);
+        System.out.println(substring);
+    }
+
+    public static void hazi1() {
+        for (int i = 0; i <= 100; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public static void hazi2() {
+        for (int i = 0; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz" + "-" + i);
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz" + "-" + i);
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz" + "-" + i);
+            } else {
+                System.out.println(i);
+            }
+        }
+    }
+
+    static boolean hazi3bool(int szam) {
+        if (szam <= 1)
+            return false;
+
+        for (int i = 2; i < szam; i++)
+            if (szam % i == 0)
+                return false;
+
+        return true;
+    }
+
+    public static void hazi3(int szam) {
+        if (hazi3bool(szam)) {
+            System.out.println(" prímszám");
+        } else System.out.println(" nem prímszám");
+    }
+
+    public static void hazi4
+
+    {
+        int[] fibonacci = new int[10];
+        fibonacci[0] = 0;
+        fibonacci[1] = 1;
+        System.out.println(fibonacci[0]);
+        System.out.println(fibonacci[1]);
+        for (int i = 2; i < fibonacci.length; i++) {
+            fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+            System.out.println(fibonacci[i]);
+        }
+
+    }
+
+
+
+
+
+
+    public static int hazi5(int a, int b) {
+        if (a == 0) {
+            return b;
+        } else if (b == 0) {
+            return a;
+        } else if (a == b) {
+            return a;
+        } else return hazi5(b, a % b);
+    }
+
+    static boolean hazi6bool(String szo) {
+        int k = 0, j = szo.length() - 1;
+
+        while (k < j) {
+            if (szo.charAt(k) != szo.charAt(j)) {
+                return false;
+            } else {
+                k++;
+                j--;
+            }
+        }
+        return true;
+    }
+
+    public static void hazi6(String szo) {
+        if (hazi6bool(szo)) {
+            System.out.print("Palindrom");
+        } else {
+            System.out.print("Nem palindrom");
+        }
+    }
+//hazi8
+public static String acheck(String a){
+    int i=a.indexOf("a");
+    if(i>=0) return a.substring(i,i+4);
+        else return "";
+    }
+
+
+
+    public static void hazi8(String szo) {
+        for (int i = 0; i < szo.length(); i++) {
+            if (szo.charAt(i) == 'a') {
+                System.out.println("a found");
+            } else if (szo.charAt(i) == 'b') {
+                System.out.println("b found");
+            } else if (szo.charAt(i) == 'c') {
+                System.out.println("c found");
+            } else
+                System.out.println(szo.charAt(i));
+        }
+    }
+
+    public static void hazi9(int[] tomb) {
+        int max = 0;
+        for(int i=0; i<tomb.length;i++){
+            if(tomb[i]>max) {
+                max = tomb[i];
+            }
+        }
+        System.out.println(max);
+    }
+
+    public static void hazi10(int numb){
+            int ford_numb = 0;
+            while (numb > 0) {
+                ford_numb = ford_numb * 10 + szam % 10;
+                numb = numb / 10;
+            }
+            System.out.println(ford_numb);
+        }
+    public static void hazi11(int szam1, int szam2, char karakter){
+            switch (karakter){
+                case '+':
+                    System.out.println(szam1+szam2);
+                    break;
+                case '-':
+                    System.out.println(szam1-szam2);
+                    break;
+                case '/':
+                    System.out.println(szam1/szam2);
+                    break;
+                case '*':
+                    System.out.println(szam1*szam2);
+                default:
+                    throw new RuntimeException("Nincs ilyen operátor");
+            }
+        }
+
+}
